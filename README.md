@@ -1,6 +1,6 @@
 # UPPAAL_NN
-We implement DeepAuto, utilizing UPPAAL model checker.
+We implement DeepAuto, utilizing UPPAAL model checker. The repository contains experiments, showing the practicability of DeepAuto. When we are interested in a specific DNN, we could use extract_weights.py to extract its weights. Based on extracted weights, we could construct formal model of the DNN following DeepAuto algorithm. DeepAuto workflow（shown in DeepAuto.png) describes the running process of our framework. 
 
-The repository contains experiments, showing the practicability of DeepAuto. extract_weights.py is designed to extract the weights of DNN, which we are interested in. Based on extracted weights, we could construct formal model of the DNN following DeepAuto algorithm.
+When we model a DNN as a automaton based on DeepAuto algorithm, the data flow should be extracted first. And then we could use data flow to model the automaton, which actually represents the DNN's interior characteristics. Thus, even if we want to model a MNIST DNN, such diffenrent work could be done based on data flow. The model of a MNIST DNN is proposed in this repository and we will give the queries used to verify properties P1, P2 and P3. The modeling process is based on DeepAuto.
 
-DeepAuto workflow describes the running process of our framework.
+If you want to reoperate this experiment, you should install UPPAAL model checker. If you have any problems, please contact with luyuteng@pku.edu.cn. I will solve your problem.
