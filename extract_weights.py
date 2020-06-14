@@ -26,8 +26,8 @@ Y_train = np_utils.to_categorical(Y_train, num_classes)
 Y_test = np_utils.to_categorical(Y_test, num_classes)
 
 model = Sequential()
-model.add(Dense(5, input_shape=(784,))) # batch_size = 20, 30, 50, ...
-model.add(Dense(3))
+model.add(Dense(5, input_shape=(784,), activation='relu')) # batch_size = 20, 30, 50, ...
+model.add(Dense(3), activation='relu')
 model.add(Dense(num_classes, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer=SGD(), metrics=['accuracy'])
 model.fit(X_train, Y_train, batch_size=50, epochs=10, verbose=1, validation_data=(X_test, Y_test))
