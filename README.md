@@ -3,6 +3,6 @@ We implement DeepAuto, utilizing UPPAAL model checker. The repository contains e
 
 From the technical perspective, we modify the xml file of normal FNN's UPPAAL model (shown as Fig.3 in submitted paper). We use import_weights.py based on the xml.etree.ElementTree module to achieve such modification.
 
-When we model a DNN as a automaton based on DeepAuto algorithm, the data flow should be extracted first. And then we could use data flow to model the automaton, which actually represents the DNN's interior characteristics. Thus, even if we want to model a MNIST DNN, such difficult work could be done based on data flow. The model of a MNIST DNN is proposed in this repository and we will give the queries used to verify properties P1, P2 and P3. The modeling process is based on DeepAuto.
+When we model a DNN as a automaton based on DeepAuto algorithm, the data flow should be extracted first. And then we could use data flow to model the automaton, which actually represents the DNN's interior characteristics. Thus, even if we want to model a MNIST DNN, such difficult work could be done based on data flow. The model of a MNIST DNN is proposed in this repository and we will give the queries used to verify properties P1, P2 and P3 （actually, we change the condition in Guard() to construct the property we want to study). The modeling process is based on DeepAuto.
 
 If you want to reoperate this experiment, you should install UPPAAL model checker. If you have any problems, please contact with luyuteng@pku.edu.cn. I will solve your problem.
